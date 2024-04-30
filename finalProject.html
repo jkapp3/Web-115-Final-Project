@@ -1,106 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Your Meal Plan</title>
+    <title>
+      WEB-115 Final Project
+    </title>
     <style>
-        
-    </style>
-    <script src="projectJS.js"></script>
-</head>
-<body>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+      }
 
-   <header>
+      header {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
 
-    <img id="build" src="build.png" alt="Meal Prep Banner"> 
+      header img {
+          max-width: 100%;
+          height: auto;
+      }
 
+      main {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+      }
 
-   </header>
+      h2 {
+          color: #333;
+      }
 
-   
-   <input id ="name" type="text" placeholder="Monday breakfast">
-   <input id ="name" type="text" placeholder="Monday snack">
-   <input id ="name" type="text" placeholder="Monday lunch">
-   <input id ="name" type="text" placeholder="Monday snack">
-   <input id ="name" type="text" placeholder="Monday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Tuesday breakfast">
-   <input id ="name" type="text" placeholder="Tuesday snack">
-   <input id ="name" type="text" placeholder="Tuesday lunch">
-   <input id ="name" type="text" placeholder="Tuesday snack">
-   <input id ="name" type="text" placeholder="Tuesday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Wednesday breakfast">
-   <input id ="name" type="text" placeholder="Wednesday snack">
-   <input id ="name" type="text" placeholder="Wednesday lunch">
-   <input id ="name" type="text" placeholder="Wednesday snack">
-   <input id ="name" type="text" placeholder="Wednesday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Thursday breakfast">
-   <input id ="name" type="text" placeholder="Thursday snack">
-   <input id ="name" type="text" placeholder="Thursday lunch">
-   <input id ="name" type="text" placeholder="Thursday snack">
-   <input id ="name" type="text" placeholder="Thursday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Friday breakfast">
-   <input id ="name" type="text" placeholder="Friday snack">
-   <input id ="name" type="text" placeholder="Friday lunch">
-   <input id ="name" type="text" placeholder="Friday snack">
-   <input id ="name" type="text" placeholder="Friday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Saturday breakfast">
-   <input id ="name" type="text" placeholder="Saturday snack">
-   <input id ="name" type="text" placeholder="Saturday lunch">
-   <input id ="name" type="text" placeholder="Saturday snack">
-   <input id ="name" type="text" placeholder="Saturday dinner">
-   <br>
-   <input id ="name" type="text" placeholder="Sunday breakfast">
-   <input id ="name" type="text" placeholder="Sunday snack">
-   <input id ="name" type="text" placeholder="Sunday lunch">
-   <input id ="name" type="text" placeholder="Sunday snack">
-   <input id ="name" type="text" placeholder="Sunday dinner">
+      input[type="text"] {
+          width: calc(100% - 20px);
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+      }
 
+      button {
+          padding: 10px 20px;
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
 
+      button:hover {
+          background-color: #555;
+      }
 
+      footer {
+          background-color: #333;
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
+  </style>
+    
 
-
-   <br>
-   <br>
-
-
-
-
-   <input id ="name" type="text" placeholder="Enter your name">
-   <input id ="email" type="text" placeholder="Enter your text email">
-   <input id ="goal" type="text" placeholder="Enter your goal">
-
-
-
-   <button id="submit" onclick="handleClick()">View Your Meal Plan</button>
-
-
-
-
-
-
-
-
+  
+    </script>
+  </head>
+  
+  <body>
+    <header>
+      <img id="build" src="build.png" alt="Meal Prep Banner">
+    </header>
+    <div>
+      <h2>
+        Monday
+      </h2>
+      <input id="monday-breakfast" type="text" placeholder="Breakfast">
+      <input id="monday-snack-1" type="text" placeholder="Snack">
+      <input id="monday-lunch" type="text" placeholder="Lunch">
+      <input id="monday-snack-2" type="text" placeholder="Snack">
+      <input id="monday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Tuesday
+      </h2>
+      <input id="tuesday-breakfast" type="text" placeholder="Breakfast">
+      <input id="tuesday-snack-1" type="text" placeholder="Snack">
+      <input id="tuesday-lunch" type="text" placeholder="Lunch">
+      <input id="tuesday-snack-2" type="text" placeholder="Snack">
+      <input id="tuesday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Wednesday
+      </h2>
+      <input id="wednesday-breakfast" type="text" placeholder="Breakfast">
+      <input id="wednesday-snack-1" type="text" placeholder="Snack">
+      <input id="wednesday-lunch" type="text" placeholder="Lunch">
+      <input id="wednesday-snack-2" type="text" placeholder="Snack">
+      <input id="wednesday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Thursday
+      </h2>
+      <input id="thursday-breakfast" type="text" placeholder="Breakfast">
+      <input id="thursday-snack-1" type="text" placeholder="Snack">
+      <input id="thursday-lunch" type="text" placeholder="Lunch">
+      <input id="thursday-snack-2" type="text" placeholder="Snack">
+      <input id="thursday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Friday
+      </h2>
+      <input id="friday-breakfast" type="text" placeholder="Breakfast">
+      <input id="friday-snack-1" type="text" placeholder="Snack">
+      <input id="friday-lunch" type="text" placeholder="Lunch">
+      <input id="friday-snack-2" type="text" placeholder="Snack">
+      <input id="friday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Saturday
+      </h2>
+      <input id="saturday-breakfast" type="text" placeholder="Breakfast">
+      <input id="saturday-snack-1" type="text" placeholder="Snack">
+      <input id="saturday-lunch" type="text" placeholder="Lunch">
+      <input id="saturday-snack-2" type="text" placeholder="Snack">
+      <input id="saturday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <div>
+      <h2>
+        Sunday
+      </h2>
+      <input id="sunday-breakfast" type="text" placeholder="Breakfast">
+      <input id="sunday-snack-1" type="text" placeholder="Snack">
+      <input id="sunday-lunch" type="text" placeholder="Lunch">
+      <input id="sunday-snack-2" type="text" placeholder="Snack">
+      <input id="sunday-dinner" type="text" placeholder="Dinner">
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2>
+        About You
+      </h2>
+      <input id="name" type="text" placeholder="Enter your name">
+      <input id="email" type="text" placeholder="Enter your email">
+      <input id="goal" type="text" placeholder="Enter your goal">
+    </div>
+    <br>
+    <br>
+    <button id="submit">
+      View Your Meal Plan
+    </button>
     <footer>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>&copy; Meal Prepsperts</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+      <p>
+        &copy; Meal Prepsperts
+      </p>
     </footer>
+   
+    <script src="projectJS.js"></script>
+  </body>
 
-</body>
 </html>
